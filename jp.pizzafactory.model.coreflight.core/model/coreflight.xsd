@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.monami-ya.com/coreflight/r0.0"
+	elementFormDefault="qualified"
+	xmlns:coreflight="http://www.monami-ya.com/coreflight/r0.0"
+	xmlns:cfs="http://www.monami-ya.com/coreflight/r0.0/cfs"
+	xmlns:cfe="http://www.monami-ya.com/coreflight/r0.0/cfe"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	ecore:nsPrefix="cf"
+	ecore:package="coreflight00">
+
+	<import schemaLocation="cfe.xsd" namespace="http://www.monami-ya.com/coreflight/r0.0/cfe"/>
+	<import schemaLocation="cfs.xsd" namespace="http://www.monami-ya.com/coreflight/r0.0/cfs"/>
+
+	<element name="SYSTEM" type="coreflight:System" ecore:name="System">
+		<key name="application-uuid">
+			<selector xpath="APPLICATIONS/*/UUID" />
+			<field xpath="." />
+		</key>
+		<keyref name="application-uuid-ref" refer="coreflight:application-uuid">
+			<selector xpath="INTER-TASK-MESSAGE-ROUTER" />
+			<field xpath="UUID" />
+		</keyref>
+	</element>
+	<element name="APPLICATIONS" type="coreflight:Applications" ecore:name="Applications"/>
+	<element name="INTER-TASK-MESSAGE-ROUTER" type="coreflight:InterTaskMessageRouter" ecore:name="InterTaskMessageRouter"/>
+	<element name="APPLICATION-REF" type="anyURI" ecore:reference="coreflight:Application" ecore:containment="false" ecore:name="ApplicationRef"/>
+	<element name="APPLICATION" type="coreflight:Application" ecore:name="Application"/>
+	<element name="PUBLISHER" type="coreflight:Publisher" ecore:name="Publisher"/>
+	<element name="SUBSCRIBER" type="coreflight:Subscriber" ecore:name="Subscriber"/>
+	<element name="SHORT-NAME" type="QName" ecore:name="ShortName"/>
+	<element name="UUID" type="coreflight:UUID" ecore:name="uuid"/>
+
+	<simpleType name="UUID">
+		<restriction base="string">
+			<length value="36" fixed="true"/>
+			<pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+		</restriction>
+	</simpleType>
+
+	<complexType name="Identifiable" abstract="true">
+		<sequence>
+			<element ref="coreflight:SHORT-NAME"/>
+			<element ref="coreflight:UUID"/>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="System">
+		<complexContent>
+			<extension base="coreflight:Identifiable">
+				<sequence>
+					<element ref="coreflight:APPLICATIONS"/>
+					<element ref="coreflight:INTER-TASK-MESSAGE-ROUTER"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Applications">
+		<choice minOccurs="0" maxOccurs="unbounded">
+			<group ref="cfe:CoreFlightExecutable"/>
+			<group ref="cfs:CoreFlightSystem"/>
+			<element ref="coreflight:APPLICATION"/>
+		</choice>
+	</complexType>
+
+
+	<complexType name="Application">
+		<complexContent>
+			<extension base="coreflight:Identifiable"/>
+		</complexContent>
+	</complexType>
+
+	<complexType name="MessagePort" abstract="true">
+		<!-- abstract -->
+		<complexContent>
+			<extension base="coreflight:Identifiable">
+				<sequence>
+					<element ref="coreflight:APPLICATION-REF"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Publisher">
+		<complexContent>
+			<extension base="coreflight:MessagePort">
+				<sequence>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Subscriber">
+		<complexContent>
+			<extension base="coreflight:MessagePort">
+				<sequence>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="InterTaskMessageRouter">
+		<complexContent>
+			<extension base="coreflight:Identifiable">
+				<choice minOccurs="0" maxOccurs="unbounded" ecore:name="applications">
+					<element ref="coreflight:PUBLISHER"/>
+					<element ref="coreflight:SUBSCRIBER"/>
+				</choice>
+			</extension>
+		</complexContent>
+	</complexType>
+
+</schema>

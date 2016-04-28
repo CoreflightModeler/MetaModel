@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coreflight:APPLICATION xmlns:coreflight="http://www.monami-ya.com/coreflight/r0.0" xmlns:tns="http://www.monami-ya.com/coreflight/r0.0/cfe" xmlns:tns1="http://www.monami-ya.com/coreflight/r0.0/cfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.monami-ya.com/coreflight/r0.0 coreflight.xsd ">
+  <coreflight:SHORT-NAME>coreflight:SHORT-NAME</coreflight:SHORT-NAME>
+</coreflight:APPLICATION>

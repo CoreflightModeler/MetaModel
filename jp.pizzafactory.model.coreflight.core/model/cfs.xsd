@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:cfs="http://www.monami-ya.com/coreflight/r0.0/cfs"
+	xmlns:cf="http://www.monami-ya.com/coreflight/r0.0"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	ecore:nsPrefix="cfs"
+	ecore:package="coreflight00.cfs"
+	targetNamespace="http://www.monami-ya.com/coreflight/r0.0/cfs">
+	<import namespace="http://www.monami-ya.com/coreflight/r0.0"
+		schemaLocation="coreflight.xsd" />
+	<element name="CFDP-FILE-TRANSFER" type="cfs:CfdpFileTransfer" />
+	<element name="CHECKSUM" type="cfs:Checksum" />
+	<element name="DATA-STORAGE" type="cfs:DataStorage" />
+	<element name="FILE-MANAGER" type="cfs:FileManager" />
+	<element name="HEALTH-AND-SAFETY" type="cfs:HealthAndSafety" />
+	<element name="HOUSEKEEPING" type="cfs:Housekeeping" />
+	<element name="LIMIT-CHECKER" type="cfs:LimitChecker" />
+	<element name="MEMORY-DWELL" type="cfs:MemoryDwell" />
+	<element name="MEMORY-MANAGEMENT" type="cfs:MemoryManagement" />
+	<element name="SCHEDULER" type="cfs:Scheduler" />
+	<element name="STORED-COMMANDING" type="cfs:StoredCommanding" />
+	<group name="CoreFlightSystem">
+		<choice>
+			<element ref="cfs:CFDP-FILE-TRANSFER" />
+			<element ref="cfs:CHECKSUM" />
+			<element ref="cfs:DATA-STORAGE" />
+			<element ref="cfs:FILE-MANAGER" />
+			<element ref="cfs:HEALTH-AND-SAFETY" />
+			<element ref="cfs:HOUSEKEEPING" />
+			<element ref="cfs:LIMIT-CHECKER" />
+			<element ref="cfs:MEMORY-DWELL" />
+			<element ref="cfs:MEMORY-MANAGEMENT" />
+			<element ref="cfs:SCHEDULER" />
+			<element ref="cfs:STORED-COMMANDING" />
+		</choice>
+	</group>
+	<complexType name="CfdpFileTransfer">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType abstract="true" name="CfsApplication">
+		<complexContent>
+			<extension base="cf:Application" />
+		</complexContent>
+	</complexType>
+	<complexType name="Checksum">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="DataStorage">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="FileManager">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="HealthAndSafety">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="Housekeeping">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="LimitChecker">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="MemoryDwell">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="MemoryManagement">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="Scheduler">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="StoredCommanding">
+		<complexContent>
+			<extension base="cfs:CfsApplication" />
+		</complexContent>
+	</complexType>
+</schema>

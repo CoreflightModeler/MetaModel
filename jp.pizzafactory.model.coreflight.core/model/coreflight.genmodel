@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (C) 2016 Monami-ya LLC, Japan" modelDirectory="/jp.pizzafactory.model.coreflight.core/src"
+    modelPluginID="jp.pizzafactory.model.coreflight.core" modelName="Coreflight" nonNLSMarkers="true"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="8.0" classNamePattern="" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
+  <foreignModel>coreflight.xsd</foreignModel>
+  <genPackages prefix="Coreflight00" resource="XML" disposableProviderFactory="true"
+      ecorePackage="coreflight00.ecore#/">
+    <genDataTypes ecoreDataType="coreflight00.ecore#//UUID"/>
+    <genClasses ecoreClass="coreflight00.ecore#//Application"/>
+    <genClasses ecoreClass="coreflight00.ecore#//Applications">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute coreflight00.ecore#//Applications/group"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/eVENTSERVICES"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/eXECUTIVESERVICES"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/sOFTWAREBUS"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/tABLESERVICES"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/tIMESERVICES"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/cFDPFILETRANSFER"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/cHECKSUM"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/dATASTORAGE"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/fILEMANAGER"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/hEALTHANDSAFETY"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/hOUSEKEEPING"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/lIMITCHECKER"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/mEMORYDWELL"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/mEMORYMANAGEMENT"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/sCHEDULER"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/sTOREDCOMMANDING"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//Applications/application"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight00.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute coreflight00.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/application"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/applicationRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/applications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/interTaskMessageRouter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/publisher"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight00.ecore#//DocumentRoot/shortName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/subscriber"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//DocumentRoot/system"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight00.ecore#//DocumentRoot/uuid"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight00.ecore#//Identifiable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight00.ecore#//Identifiable/shortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight00.ecore#//Identifiable/uuid"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight00.ecore#//InterTaskMessageRouter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute coreflight00.ecore#//InterTaskMessageRouter/applications"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//InterTaskMessageRouter/publisher"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//InterTaskMessageRouter/subscriber"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight00.ecore#//MessagePort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference coreflight00.ecore#//MessagePort/applicationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight00.ecore#//Publisher"/>
+    <genClasses ecoreClass="coreflight00.ecore#//Subscriber"/>
+    <genClasses ecoreClass="coreflight00.ecore#//System">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//System/applications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight00.ecore#//System/interTaskMessageRouter"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Cfe" basePackage="coreflight00" resource="XML" disposableProviderFactory="true"
+      ecorePackage="cfe.ecore#/">
+    <genClasses ecoreClass="cfe.ecore#//CfeApplication"/>
+    <genClasses ecoreClass="cfe.ecore#//EventServices"/>
+    <genClasses ecoreClass="cfe.ecore#//ExecutiveServices"/>
+    <genClasses ecoreClass="cfe.ecore#//SoftwareBus"/>
+    <genClasses ecoreClass="cfe.ecore#//TableServices"/>
+    <genClasses ecoreClass="cfe.ecore#//TimeServices"/>
+    <genClasses ecoreClass="cfe.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute cfe.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/eVENTSERVICES"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/eXECUTIVESERVICES"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/sOFTWAREBUS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/tABLESERVICES"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfe.ecore#//DocumentRoot/tIMESERVICES"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Cfs" basePackage="coreflight00" resource="XML" disposableProviderFactory="true"
+      ecorePackage="cfs.ecore#/">
+    <genClasses ecoreClass="cfs.ecore#//CfdpFileTransfer"/>
+    <genClasses ecoreClass="cfs.ecore#//CfsApplication"/>
+    <genClasses ecoreClass="cfs.ecore#//Checksum"/>
+    <genClasses ecoreClass="cfs.ecore#//DataStorage"/>
+    <genClasses ecoreClass="cfs.ecore#//FileManager"/>
+    <genClasses ecoreClass="cfs.ecore#//HealthAndSafety"/>
+    <genClasses ecoreClass="cfs.ecore#//Housekeeping"/>
+    <genClasses ecoreClass="cfs.ecore#//LimitChecker"/>
+    <genClasses ecoreClass="cfs.ecore#//MemoryDwell"/>
+    <genClasses ecoreClass="cfs.ecore#//MemoryManagement"/>
+    <genClasses ecoreClass="cfs.ecore#//Scheduler"/>
+    <genClasses ecoreClass="cfs.ecore#//StoredCommanding"/>
+    <genClasses ecoreClass="cfs.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute cfs.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/cFDPFILETRANSFER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/cHECKSUM"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/dATASTORAGE"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/fILEMANAGER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/hEALTHANDSAFETY"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/hOUSEKEEPING"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/lIMITCHECKER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/mEMORYDWELL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/mEMORYMANAGEMENT"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/sCHEDULER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cfs.ecore#//DocumentRoot/sTOREDCOMMANDING"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

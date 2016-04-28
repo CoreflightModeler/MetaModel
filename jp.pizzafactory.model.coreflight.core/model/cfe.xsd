@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns:cfe="http://www.monami-ya.com/coreflight/r0.0/cfe"
+	xmlns:cf="http://www.monami-ya.com/coreflight/r0.0"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	ecore:nsPrefix="cfe"
+	ecore:package="coreflight00.cfe" targetNamespace="http://www.monami-ya.com/coreflight/r0.0/cfe">
+	<import namespace="http://www.monami-ya.com/coreflight/r0.0"
+		schemaLocation="coreflight.xsd" />
+	<element name="EVENT-SERVICES" type="cfe:EventServices" />
+	<element name="EXECUTIVE-SERVICES" type="cfe:ExecutiveServices" />
+	<element name="SOFTWARE-BUS" type="cfe:SoftwareBus" />
+	<element name="TABLE-SERVICES" type="cfe:TableServices" />
+	<element name="TIME-SERVICES" type="cfe:TimeServices" />
+	<group name="CoreFlightExecutable">
+		<choice>
+			<element ref="cfe:EVENT-SERVICES"/>
+			<element ref="cfe:EXECUTIVE-SERVICES"/>
+			<element ref="cfe:SOFTWARE-BUS"/>
+			<element ref="cfe:TABLE-SERVICES"/>
+			<element ref="cfe:TIME-SERVICES"/>
+		</choice>
+	</group>
+	<complexType abstract="true" name="CfeApplication">
+		<complexContent>
+			<extension base="cf:Application" />
+		</complexContent>
+	</complexType>
+	<complexType name="EventServices">
+		<complexContent>
+			<extension base="cfe:CfeApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="ExecutiveServices">
+		<complexContent>
+			<extension base="cfe:CfeApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="SoftwareBus">
+		<complexContent>
+			<extension base="cfe:CfeApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="TableServices">
+		<complexContent>
+			<extension base="cfe:CfeApplication" />
+		</complexContent>
+	</complexType>
+	<complexType name="TimeServices">
+		<complexContent>
+			<extension base="cfe:CfeApplication" />
+		</complexContent>
+	</complexType>
+</schema>

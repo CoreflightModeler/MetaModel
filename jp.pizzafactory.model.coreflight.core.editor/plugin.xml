@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated coreflight -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="coreflight00.presentation.Coreflight00ModelWizardID"
+            name="%_UI_Coreflight00ModelWizard_label"
+            class="coreflight00.presentation.Coreflight00ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Coreflight00ModelFile.gif">
+         <description>%_UI_Coreflight00ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated coreflight -->
+      <editor
+            id="coreflight00.presentation.Coreflight00EditorID"
+            name="%_UI_Coreflight00Editor_label"
+            icon="icons/full/obj16/Coreflight00ModelFile.gif"
+            extensions="coreflight00"
+            class="coreflight00.presentation.Coreflight00Editor"
+            contributorClass="coreflight00.presentation.Coreflight00ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated coreflight -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="coreflight00.cfe.presentation.CfeModelWizardID"
+            name="%_UI_CfeModelWizard_label"
+            class="coreflight00.cfe.presentation.CfeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CfeModelFile.gif">
+         <description>%_UI_CfeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated coreflight -->
+      <editor
+            id="coreflight00.cfe.presentation.CfeEditorID"
+            name="%_UI_CfeEditor_label"
+            icon="icons/full/obj16/CfeModelFile.gif"
+            extensions="cfe"
+            class="coreflight00.cfe.presentation.CfeEditor"
+            contributorClass="coreflight00.cfe.presentation.CfeActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated coreflight -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="coreflight00.cfs.presentation.CfsModelWizardID"
+            name="%_UI_CfsModelWizard_label"
+            class="coreflight00.cfs.presentation.CfsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CfsModelFile.gif">
+         <description>%_UI_CfsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated coreflight -->
+      <editor
+            id="coreflight00.cfs.presentation.CfsEditorID"
+            name="%_UI_CfsEditor_label"
+            icon="icons/full/obj16/CfsModelFile.gif"
+            extensions="cfs"
+            class="coreflight00.cfs.presentation.CfsEditor"
+            contributorClass="coreflight00.cfs.presentation.CfsActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

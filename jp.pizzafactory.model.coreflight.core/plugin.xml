@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated coreflight -->
+      <package
+            uri="http://www.monami-ya.com/coreflight/r0.0"
+            class="coreflight00.Coreflight00Package"
+            genModel="model/coreflight.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated coreflight -->
+      <parser
+            type="coreflight00"
+            class="coreflight00.util.Coreflight00ResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated coreflight -->
+      <package
+            uri="http://www.monami-ya.com/coreflight/r0.0/cfe"
+            class="coreflight00.cfe.CfePackage"
+            genModel="model/coreflight.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated coreflight -->
+      <parser
+            type="cfe"
+            class="coreflight00.cfe.util.CfeResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated coreflight -->
+      <package
+            uri="http://www.monami-ya.com/coreflight/r0.0/cfs"
+            class="coreflight00.cfs.CfsPackage"
+            genModel="model/coreflight.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated coreflight -->
+      <parser
+            type="cfs"
+            class="coreflight00.cfs.util.CfsResourceFactoryImpl"/>
+   </extension>
+</plugin>
