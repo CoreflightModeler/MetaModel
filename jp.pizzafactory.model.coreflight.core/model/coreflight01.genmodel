@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (C) 2016 Monami-ya LLC, Japan. All rights reserved."
+    modelDirectory="/jp.pizzafactory.model.coreflight.core/src" modelPluginID="jp.pizzafactory.model.coreflight.core"
+    modelName="Coreflight01" nonNLSMarkers="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
+  <foreignModel>coreflight01.ecore</foreignModel>
+  <genPackages prefix="Coreflight01" resource="XML" disposableProviderFactory="true"
+      ecorePackage="coreflight01.ecore#/">
+    <genDataTypes ecoreDataType="coreflight01.ecore#//UUID"/>
+    <genClasses ecoreClass="coreflight01.ecore#//CfPackage"/>
+    <genClasses ecoreClass="coreflight01.ecore#//CfPackages">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coreflight01.ecore#//CfPackages/packages"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight01.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute coreflight01.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight01.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight01.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight01.ecore#//DocumentRoot/coreflight"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight01.ecore#//CfSubPackage"/>
+    <genClasses image="false" ecoreClass="coreflight01.ecore#//Identifiable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight01.ecore#//Identifiable/shortName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute coreflight01.ecore#//Identifiable/uuid"/>
+    </genClasses>
+    <genClasses ecoreClass="coreflight01.ecore#//Coreflight">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight01.ecore#//Coreflight/packages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference coreflight01.ecore#//Coreflight/interTaskMessageRouter"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="coreflight01.ecore#//Referable"/>
+    <genClasses image="false" ecoreClass="coreflight01.ecore#//PackageReferable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference coreflight01.ecore#//PackageReferable/reference"/>
+    </genClasses>
+    <nestedGenPackages prefix="InterTaskMessageRouter" resource="XML" disposableProviderFactory="true"
+        ecorePackage="coreflight01.ecore#//interTaskMessageRouter">
+      <genClasses ecoreClass="coreflight01.ecore#//interTaskMessageRouter/InterTaskMessageRouter">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference coreflight01.ecore#//interTaskMessageRouter/InterTaskMessageRouter/subscriber"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="coreflight01.ecore#//interTaskMessageRouter/MessagePort"/>
+      <genClasses ecoreClass="coreflight01.ecore#//interTaskMessageRouter/Publisher"/>
+      <genClasses ecoreClass="coreflight01.ecore#//interTaskMessageRouter/Subscriber">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference coreflight01.ecore#//interTaskMessageRouter/Subscriber/publishers"/>
+      </genClasses>
+      <genClasses ecoreClass="coreflight01.ecore#//interTaskMessageRouter/Publishers">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference coreflight01.ecore#//interTaskMessageRouter/Publishers/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
